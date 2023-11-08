@@ -25,4 +25,7 @@ public class Product {
     @JoinColumn(name = "category_id")
     private Category category;
 
+    @Column(name = "price", nullable = false)
+    private float price;
+
 }

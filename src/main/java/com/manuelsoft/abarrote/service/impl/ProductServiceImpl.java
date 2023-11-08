@@ -54,7 +54,7 @@ public class ProductServiceImpl implements ProductService {
 
         var category = categoryRepository.getReferenceById(productDto.getCategoryId());
         updatedProduct.setCategory(category);
-
+        updatedProduct.setPrice(productDto.getPrice());
         updatedProduct = productRepository.save(updatedProduct);
 
         return ProductMapper.mapToProductDto(updatedProduct);

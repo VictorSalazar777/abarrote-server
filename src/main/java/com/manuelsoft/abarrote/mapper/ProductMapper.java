@@ -9,7 +9,8 @@ public class ProductMapper {
         return new ProductDto(
                 product.getId(),
                 product.getName(),
-                product.getCategory().getId()
+                product.getCategory().getId(),
+                product.getPrice()
         );
     }
 
@@ -17,6 +18,7 @@ public class ProductMapper {
         Product product = new Product();
         product.setId(productDto.getId());
         product.setName(productDto.getName());
+        product.setPrice(productDto.getPrice());
         return product;
     }
 
